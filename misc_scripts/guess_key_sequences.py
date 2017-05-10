@@ -15,7 +15,7 @@ import re
 import rune_manipulation as rmanip
 
 def numbers_to_runes(sequence):
-    return [rmanip.table[n][0] for n in sequence]
+    return [rmanip.table[n % 29][0] for n in sequence]
 
 if len(sys.argv) < 3:
     print("Usage: python3 %s <key_sequence> <section_number>"%sys.argv[0])
